@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Ticket System</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    {% if alert == True %}
+        <div class="successRegister">
+            {{userName}}, you have canceled ticket for {{movieName}} movie!
+        </div>
+    {% endif %}
+
+
+    <div class="menu-container">
+        <h1>Welcome, {{userName}}:</h1>
+        <ul>
+            <li> <form action="/addNewMovieForm"><button type="submit">Add New Movie</button></form> </li>
+            <li> <form action="/showMovie"><button type="submit">Show All Movies</button></form> </li>
+            <li> <form action="/buyTicket"><button type="submit">Buy Ticket</button></form> </li>
+            <li> <form action="/cancelTicket"><button type="submit">Cancel Ticket</button></form> </li>
+        </ul>
+    </div>
+</body>
+</html>
