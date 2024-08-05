@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cinema Ticket System</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    {% if alert == True %}
+        <div class="wrongLoginOrPass">
+            Your login or password is wrong!
+        </div>
+    {% endif %}
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm" action="/login" method="post">
+            <div class="input-group">
+                <input type="text" placeholder="Login" name="login" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <div class="button-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        <form action="/registerPage">
+            <div class="button-group">
+            <button type="submit">Do not have account?</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
